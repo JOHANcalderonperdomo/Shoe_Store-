@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    height: 100vh; /* Establece la altura del navbar al 100% del viewport */
+    width: 200px; /* Ancho del navbar */
+    background-color: #333; /* Color de fondo del navbar */
+    position: fixed; /* Fija el navbar en su posición */
+}
+
+.navbar a {
+    display: block; /* Hace que los enlaces se muestren en bloques */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espaciado interno de los enlaces */
+    text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
+}
+
+.navbar a:hover {
+    background-color: #555; /* Cambia el color de fondo al pasar el ratón sobre los enlaces */
+}
+
+.navbar a.active {
+    background-color: #4CAF50; /* Color de fondo del enlace activo */
+}
