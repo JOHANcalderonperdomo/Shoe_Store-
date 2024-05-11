@@ -8,11 +8,46 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="/View/navbar.html" class="active">Shoes Store</a>
-        <a href="/View/Cliente.html">Cliente</a>
-        <a href="/View/Productos.html">Productos</a>
-        <a href="/View/Ventas.html">Ventas</a>
-        <a href="/View/Descripcion_ventas.html">Description Ventas</a>
+        <a href="#" class="active" onclick="changeFrameSrc('/View/navbar.html')">
+            <span class="icon">
+                <img src="/assets/icon/controller.svg" alt="Icono de tienda de zapatos">
+            </span>
+            
+        </a>
+        <a href="#" onclick="changeFrameSrc('/View/Cliente.html')">
+            <span class="icon">
+                <img src="/assets/icon/person.svg" alt="Icono de cliente">
+            </span>
+            Cliente
+        </a>
+        <a href="#" onclick="changeFrameSrc('/View/Productos.html')">
+            <span class="icon">
+                <img src="/assets/icon/cart2.svg" alt="Icono de productos">
+            </span>
+            Productos
+        </a>
+        <a href="#" onclick="changeFrameSrc('/View/Ventas.html')">
+            <span class="icon">
+                <img src="/assets/icon/briefcase-fill.svg" alt="Icono de ventas">
+            </span>
+            Ventas
+        </a>
+        <a href="#" onclick="changeFrameSrc('/View/Descripcion_ventas.html')">
+            <span class="icon">
+                <img src="/assets/icon/bar-chart-fill.svg" alt="Icono de descripción de ventas">
+            </span>
+            Description Ventas
+        </a>
     </div>
+    <iframe id="contentFrame" frameborder="0" width="85%" height="100%" style="position: fixed; top: 0; right: 0;"></iframe>
+
+    <script>
+        function changeFrameSrc(url) {
+            // Obtener el elemento iframe por su ID
+            var frame = document.getElementById('contentFrame');
+            // Cambiar el atributo src del iframe
+            frame.src = url;
+        }
+    </script>
 </body>
 </html>

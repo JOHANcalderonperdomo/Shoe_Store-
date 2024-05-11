@@ -1,0 +1,44 @@
+form {
+    margin: 1rem; /* Add some margin for spacing */
+  }
+
+  /* Style labels to stack on top of inputs */
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Style inputs to have full width */
+  input[type="text"],
+  input[type="hidden"],
+  select {
+    width: 25%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  /* Style the submit button */
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Style the "Estado" section with a grid layout */
+  .estado {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 0.5rem;
+    align-items: center;
+  }
+
+  /* Style the "Activo" text */
+  .activo {
+    color: green;
+  }
+
+  

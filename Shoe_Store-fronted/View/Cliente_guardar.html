@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente Nuevo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/litera/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/EstyleClienteNuevo.css">
+</head>
+
+<body>
+    <form>
+    <h3>Cliente</h3>
+    <div class="form-group">
+      <label for="tipo_identificacion">Tipo de Identificación:</label>
+      <select class="form-select" id="tipo_identificacion" required>
+      </select>
+
+
+      <label for="identificacion">Identificación:</label>
+      <input type="text" class="form-control" name="identificacion" id="identificacion" value="" required
+        placeholder="Ingresar la identificacion">
+
+
+      <label for="nombre_cliente">Nombre:</label>
+      <input type="text" class="form-control" name="nombre_cliente" id="nombre_cliente" value="" required
+        placeholder="Ingresar el nombre del cliente">
+    </div>
+
+      <label for="apellido_cliente">Apellido:</label>
+      <input type="text" class="form-control" name="apellido_cliente" id="apellido_cliente" value="" required
+        placeholder="Ingresar el apellido del cliente">
+    </div>
+
+
+      <label for="telefono">Teléfono:</label>
+      <input type="text" class="form-control" name="telefono" id="telefono" value="" required
+        placeholder="Ingresar el telefono">
+    </div>
+
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" class="form-control" name="direccion" id="direccion" value="" required
+        placeholder="Ingresar la direccion">
+    </div>
+
+
+      <label for="ciudad">Ciudad:</label>
+      <input type="text" class="form-control" name="ciudad" id="ciudad" value="" required
+        placeholder="Ingresar la ciudad">
+    </div>
+
+
+        <label for="estado">Estado:</label>
+        <select class="form-select" id="estado" required>
+        </select>
+      </div>
+<br></br>
+<button name="btnAgregar" id="btnAgregar" class="btn btn-primary" type="button" onclick="save()">Agregar</button>
+
+
+
+  </form>
+  <script src="/JS/Cliente.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        loadEstado();
+        loadTipoDocumento();
+    </script>
+
+</body>
+
+</html>

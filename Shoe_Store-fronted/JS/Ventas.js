@@ -158,7 +158,7 @@ function save() {
         var data = {
           "total": $("#total").val(),
           "fecha_venta": $("#fecha_venta").val(),
-          "cliente": {
+          "clientes": {
             "id": selectedClienteId
         },
           "estado": $("#estado").val(),
@@ -205,6 +205,7 @@ function save() {
           $("#id").val(data.id);
           $("#total").val(data.total);
           $("#fecha_venta").val(data.fecha_venta);
+          $("#selected_cliente_id").val(data.cliente.id);
           $("#cliente_id").val(data.cliente.nombre_cliente);
           $("#estado").val(data.estado);
     
