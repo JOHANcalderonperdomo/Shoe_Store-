@@ -61,3 +61,26 @@
     cursor: pointer;
     font-size: inherit;
 }
+
+.filtro {
+  display: flex; /* Enable Flexbox for the container */
+  flex-direction: column; /* Arrange items vertically */
+  align-items: flex-start; /* Align items to the left */
+  margin-bottom: 1rem; /* Add some margin for spacing */
+}
+
+.filtro label {
+  display: block; /* Make labels block elements */
+  margin-bottom: 0.5rem; /* Add space between labels and inputs */
+}
+
+.filtro input {
+  width: 100%; /* Make inputs full width */
+  padding: 0.5rem 1rem; /* Add padding to inputs */
+  border: 1px solid #ccc; /* Add border to inputs */
+  border-radius: 4px; /* Add rounded corners to inputs */
+}
+
+.button-container {
+  float: right;
+}

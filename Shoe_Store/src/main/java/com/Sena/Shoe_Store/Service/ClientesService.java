@@ -1,5 +1,6 @@
 package com.Sena.Shoe_Store.Service;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,12 +14,14 @@ public class ClientesService extends ABaseService<Clientes> implements IClientes
 
 	@Autowired
 	public IClientesRepository repository;
-	
+
 	@Override
 	protected IBaseRepository<Clientes, Long> getRepository() {
 		// TODO Auto-generated method stub
 		return repository;
 	}
-
+	
+	
+	
 	
 }

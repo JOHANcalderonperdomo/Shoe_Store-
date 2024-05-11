@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    
+
     <div class="container">
 
 
@@ -27,41 +27,70 @@
         </div>
 
         <legend>Cliente</legend>
-        <label for="filtar_nombre">Filtrar por Nombre:</label>
-        <input type="text" class="form-control" name="filtar_nombre" id="filtar_nombre" value="" required
-          placeholder="Ingresar el Nombre">
+        <div class="container">
 
-          <label for="filtar_nombre">Filtrar por Ciudad:</label>
-      <input type="text" class="form-control" name="filtrar_ciudad" id="filtrar_ciudad" value="" required
-        placeholder="Ingresar la Ciudad">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="filtar_nombre">Filtrar por Nombre:</label>
+                        <input type="text" class="form-control" name="filtar_nombre" id="filtar_nombre" value=""
+                            required placeholder="Ingresar el Nombre">
+                    </div>
+                </div>
 
-        <label for="filtar_nombre">filtrar por Estado:</label>
-      <input type="text" class="form-control" name="filtrar_estado" id="filtrar_estado" value="" required
-        placeholder="Ingresar el Estado">
-        
-        <button name="btnAgregar" id="btnAgregar" class="btn btn-primary" type="button" >Aplicar Filtros</button>
-        <button name="btnAgregar" id="btnAgregar" class="btn btn-primary" type="button" onclick="clearData()">Limpiar Filtros</button>  
-
-        <table class="table table-striped">
-            <thead>
-                <tr class="table-dark">
-                    <th scope="col">tipo_identificacion</th>
-                    <th scope="col">identificacion</th>
-                    <th scope="col">nombre_cliente</th>
-                    <th scope="col">apellido_cliente</th>
-                    <th scope="col">telefono</th>
-                    <th scope="col">direccion</th>
-                    <th scope="col">ciudad</th>
-                    <th scope="col">estado</th>
-                    <th scope="col">Actions</th>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="filtar_ciudad">Filtrar por Ciudad:</label>
+                        <input type="text" class="form-control" name="filtar_ciudad" id="filtar_ciudad" value=""
+                            required placeholder="Ingresar la Ciudad">
+                    </div>
+                </div>
 
 
-                </tr>
-            </thead>
-            <tbody class="table-group-divider" id="resultData">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="filtar_estado">Filtrar por Estado:</label>
+                        <input type="text" class="form-control" name="filtar_estado" id="filtar_estado" value=""
+                            required placeholder="Ingresar el Estado">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br></br>
 
-            </tbody>
-        </table>
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-md-6">
+                <!-- Aquí puedes agregar contenido si lo deseas -->
+            </div>
+            <div class="col-md-6 d-md-flex justify-content-md-end">
+                <button name="btnAgregar" id="btnAgregar" class="btn btn-primary me-md-2" type="button">Aplicar Filtros</button>
+                <button name="btnAgregar" id="btnAgregar" class="btn btn-secondary" type="button">Limpiar</button>
+            </div>
+        </div>
+    </div>
+    <br></br>
+    <table class="table table-striped">
+        <thead>
+            <tr class="table-dark">
+                <th scope="col">tipo_identificacion</th>
+                <th scope="col">identificacion</th>
+                <th scope="col">nombre_cliente</th>
+                <th scope="col">apellido_cliente</th>
+                <th scope="col">telefono</th>
+                <th scope="col">direccion</th>
+                <th scope="col">ciudad</th>
+                <th scope="col">estado</th>
+                <th scope="col">Actions</th>
+
+
+            </tr>
+        </thead>
+        <tbody class="table-group-divider" id="resultData">
+
+        </tbody>
+    </table>
 
     </div>
     <script src="/JS/Cliente.js"></script>

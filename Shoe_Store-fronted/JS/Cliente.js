@@ -61,6 +61,7 @@ function save() {
                       <td>` + item.estado + `</td>
                       <td> <button type="button" class="btn btn-primary" onclick="findById(${item.id})"> <img src="../assets/icon/pencil-square.svg" > </button>
                       <button type="button" class="btn btn-secundary" onclick="deleteById(${item.id})"> <img src="../assets/icon/trash3.svg" > </button></td>
+                      
                   </tr>`;
             }
           });
@@ -119,17 +120,29 @@ function save() {
     }
 
     function deleteById(id) {
-      $.ajax({
-        url: "http://localhost:9000/Shoe-Store/v1/api/clientes/" + id,
-        method: "delete",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }).done(function (result) {
-        alert("Registro eliminado con éxito");
-        loadData();
-      });
-    }
+      // Mostrar confirmación al usuario
+      if (confirm("¿Estás seguro de que deseas eliminar este registro?")) {
+          // Si el usuario confirma, realizar la eliminación
+          $.ajax({
+              url: "http://localhost:9000/Shoe-Store/v1/api/clientes/" + id,
+              method: "DELETE",
+              headers: {
+                  "Content-Type": "application/json",
+              },
+          }).done(function (result) {
+              alert("Registro eliminado con éxito");
+              loadData();
+          }).fail(function (error) {
+              // Manejar errores en caso de que ocurran
+              console.error("Error al eliminar el registro:", error);
+              alert("Error al eliminar el registro. Por favor, inténtalo de nuevo.");
+          });
+      } else {
+          // Si el usuario cancela, no hacer nada
+          console.log("Eliminación cancelada por el usuario");
+      }
+  }
+  
   
   
     function update() {
